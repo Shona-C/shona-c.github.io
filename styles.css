@@ -195,3 +195,202 @@ center center / cover no-repeat;
 .bank-details p {
     margin: 0;
 }
+
+/* Mobile layout refinements */
+@media (max-width: 750px) {
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    /* Keep both people visible in the hero photograph on narrow screens. */
+    .hero {
+        min-height: 100svh;
+        background-image:
+            linear-gradient(135deg, rgba(38,51,47,.80), rgba(71,97,87,.55)),
+            url('hero-placeholder.jpg');
+        background-size: auto 100%;
+        background-position: 31% center;
+        background-repeat: no-repeat;
+        background-color: var(--dark);
+    }
+
+    .nav {
+        height: 64px;
+        padding: 0 20px;
+        justify-content: flex-end;
+    }
+
+    .menu-button {
+        display: block;
+        margin-left: auto;
+    }
+
+    .menu {
+        top: 64px;
+        text-align: center;
+        align-items: center;
+        z-index: 20;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+        padding: 7px 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        padding: 45px 22px 55px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.1rem, 17vw, 4.8rem);
+        line-height: .88;
+        margin: 20px auto;
+        overflow-wrap: normal;
+    }
+
+    .eyebrow,
+    .date,
+    .intro {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .date {
+        font-size: .86rem;
+        letter-spacing: .09em;
+    }
+
+    .intro {
+        max-width: 92%;
+    }
+
+    .section {
+        width: 100%;
+        padding: 55px 20px;
+        text-align: center;
+    }
+
+    .section > p {
+        width: 100%;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .grid,
+    .accordions,
+    .timeline {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card,
+    .info,
+    .hotel {
+        width: 100%;
+        padding: 28px 20px;
+        text-align: center;
+    }
+
+    .timeline {
+        text-align: left;
+    }
+
+    .timeline div {
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .schedule-title {
+        width: 100%;
+        gap: 7px;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .schedule-title h2,
+    .welcome .schedule-title h2,
+    .venue-background .venue-title h2,
+    #faq .schedule-title h2,
+    .gifts .schedule-title h2,
+    .section h2.winter-title {
+        font-size: clamp(2.5rem, 13vw, 4.25rem) !important;
+        line-height: .95;
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        text-align: center;
+        margin: 8px 0 18px;
+    }
+
+    .schedule-title .schedule-pinecone {
+        width: 42px;
+        height: 42px;
+    }
+
+    .pinecone-icon {
+        width: 78px;
+        height: 78px;
+    }
+
+    #faq .accordions {
+        margin: 20px auto 0 !important;
+        text-align: left;
+    }
+
+    .bank-details {
+        width: 100%;
+        max-width: 390px;
+        margin: 25px auto 0;
+        padding: 20px 16px;
+    }
+
+    .button {
+        max-width: 100%;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+        padding: 25px 18px;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 390px) {
+    .hero {
+        background-position: 29% center;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 16vw, 3.8rem);
+    }
+
+    .schedule-title h2,
+    .welcome .schedule-title h2,
+    .venue-background .venue-title h2,
+    #faq .schedule-title h2,
+    .gifts .schedule-title h2,
+    .section h2.winter-title {
+        font-size: clamp(2.25rem, 12vw, 3.4rem) !important;
+    }
+
+    .schedule-title .schedule-pinecone {
+        width: 34px;
+        height: 34px;
+    }
+}
